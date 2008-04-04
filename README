@@ -23,6 +23,10 @@ rake db:schema:load
 
 Change the PASSWORD_SALT in config/environment.rb.
 
+Update git submodules:
+git submodule init
+git submodule update
+
 Launch it:
 
 script/server

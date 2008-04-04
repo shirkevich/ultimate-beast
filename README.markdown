@@ -42,4 +42,9 @@ Requiremets
 
 * gem install ruby-openid
 
+Localization
+------------
 
+Translations stored in lang/
+
+Change default language in config/initializers/gibberish.rb

@@ -36,9 +36,9 @@ recent_posts: Свежие сообщения
 voices_title: Кто здесь?
 monitor_title: Monitor
 users_title: Пользователи
-recent_activity: Recent Activity
+recent_activity: Последняя активность
 no_recent_activity: No recent activity
-users_online: Users Online
+users_online: Пользователей на сайте
 change_login: Please change your login
 gravatar_notice: To have your very own avatar displayed on this forum visit {gravatar} and sign up for a free gravatar.
 change_email_or_password: Change e-mail or password
@@ -62,7 +62,7 @@ next: "Next &raquo;"
 previous: "&laquo; Previous"
 topics_count: "тем: {count}"
 posts_count: "сообщений: {count}"
-voices_count: "пользователь: {count}"
+voices_count: "пользователей: {count}"
 posts_count_found: "найдено сообщений: {count}"
 cancel: cancel
 page: "page {page}"

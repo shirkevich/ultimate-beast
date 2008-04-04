@@ -100,102 +100,102 @@ delete_conf: "Delete this {thing} forever?"
 email_directions: Enter your email, and a brand new login key will be sent to you.  Click the link in the email to log in, and then change your password.
 email_submit: E-mail me the link
 powered_by: Powered by
-and: and
-users_monitored_topics: "{name}'s Monitored Topics"
-delete: delete
-activation: Please visit the link below to activate your account.
-without_http: without http://
-admin_in_parens: '(admin)'
-admin_and_moderation: Admin &amp; Moderation
-remove_moderated_forum: This user can moderate the following forums.  Click one to remove.
-remove_user_as_moderator: Remove user as moderator for
-searching_for: Searching for
-locked: locked
-edit: edit
-delete: delete
-login: login
-once: once
-and_again: and again
+and: и
+users_monitored_topics: "{name}'s Наблюдаемые Темы"
+delete: удалить
+activation: Пожалуйста проследуйте по ссылке чтобы активировать свой аккаунт.
+without_http: без http://
+admin_in_parens: '(администратор)'
+admin_and_moderation: Администрирование &amp; Модерация
+remove_moderated_forum: Этот пользователь может модерировать следующие форумы. Нажмите чтобы удалить.
+remove_user_as_moderator: Отменить для пользователя модерирование
+searching_for: Ищется
+locked: заблокировано
+edit: редактировать
+delete: удалить
+login: войти
+once: разок
+and_again: и еще
 
-open_id_field: Enter your OpenID Identity Url if you know it
-open_id_field_extended: Enter your OpenID Identity Url if you know it.  If your Identity Url supports the {sreg} extension, you can {login_link} and create your account automatically
-login_field: Logins should start with least 2 characters and may consist of letters, numbers, or the underscore.
-password_field: Enter your desired password twice.  It must be at least 5 characters.
+open_id_field: Введите ваш OpenID
+open_id_field_extended: Введите ваш OpenID. Если Ваш OpenID провайдер поддерживает {sreg} расширения, вы можете {login_link} и создать аккаунт автоматически
+login_field: Логин должен начинаться с 2х символов и может содержать буквы, цифры и знаки подчеркивания.
+password_field: Введите пароль дважды. Он должен быть не короче 5 символов.
 
-formatting_help: Formatting Help
-formatting_bold: "*bold*"
-formatting_italics: "_italics_"
-formatting_blockquote: "bq. <span>(quotes)</span>"
-formatting_list: "* or # <span>(lists)</span>"
+formatting_help: Помощь по форматированию
+formatting_bold: "*полужирный*"
+formatting_italics: "_курсив_"
+formatting_blockquote: "bq. <span>(цитаты)</span>"
+formatting_list: "* или # <span>(списки)</span>"
 
 # additions by Raimonds Simanovskis on 2007-05-11
-or: or
-by_user: by {user}
-in_forum: in {forum}
+or: или
+by_user: от {user}
+in_forum: в {forum}
 a_few_seconds_ago: "несколько секунд назад"
 1_minute_ago: "1 минуту назад"
 minutes_ago: "{minutes} минут(ы) назад"
-1_hour_ago: "1 часс назад"
-hours_ago: "{hours} час(ов) назад"
+1_hour_ago: "1 час назад"
+hours_ago: "{hours} часа(ов) назад"
 1_day_ago: "1 день назад"
-days_ago: "{days} день(дней) назад"
+days_ago: "{days} дня(дней) назад"
 
-topics: topics
-posts: posts
+topics: Темы
+posts: Сообщения
 topic_count: "тем: {count}"
 post_count: "сообщений: {count}"
-voice_count: "пользоватей: {count}"
-post_count_found: "{count} post found"
+voice_count: "пользователей: {count}"
+post_count_found: "сообщений найдено: {count}"
 
-comma_locked_topic: ", this topic is locked."
+comma_locked_topic: ", эта тема заблокирована."
 
 view: посмотреть
 last: последний
 
-administrator_title: Administrator
-moderator_title: Moderator
+administrator_title: Администратор
+moderator_title: Модератор
 
-topic_locked_title: Topic locked
+topic_locked_title: Тема заблокирована
 
-recent_posts_in_topic: "Recent Posts in '{topic}' | Beast"
+recent_posts_in_topic: "Последние сообщения в '{topic}' | Beast"
 
-delete_post_conf: "Delete this post?  Are you sure?"
-delete_topic_conf: "Delete this topic?  Are you sure?"
+delete_post_conf: "Удалить это сообщение? Точно?"
+delete_topic_conf: "Удалить эту тему? Точно?"
 
-date_format: "%b %e, %Y"
-datetime_format: "%b %e, %Y  %l:%M%p"
+date_format: "%d.%m.%Y"
+datetime_format: "%d.%m.%Y %H:%M"
 
 posts_feed_title: "{search_posts_title} | Beast"
 
 feed_language: en-us
-posts_user_is_monitoring: "Posts that {user} is monitoring"
+posts_user_is_monitoring: "Сообщения за которыми наблюдает {user}"
 
-view_all: all
+view_all: все
 
 for_user: для {user}
 
 signup: Регистрация
-signup_action: Регистрация
+signup_action: Зарегистрироваться
 login_action: Войти
 
-check_email_message: "Please check the e-mail address"
-post_something_message: "Please post something at least..."
-error_occured_message: "An error occurred"
-post_deleted_message: "Post of '{title}' was deleted."
-logged_out_message: "You have been logged out."
-openid_not_found_message: "Sorry, the OpenID server couldn't be found"
-openid_canceled_message: "OpenID verification was canceled"
-openid_failed_message: "Sorry, the OpenID verification failed"
-openid_saving_error_message: "Error saving the fields from your OpenID profile at {identity_url}: {errors}"
-openid_no_user_message: "Sorry, no user by the identity URL {identity_url} exists"
-invalid_login_message: "Invalid login or password, try again please."
-topic_deleted_message: "Topic '{title}' was deleted."
-could_not_find_account_message: "I could not find an account with the email address '{email}'. Did you type it correctly?"
-signup_permanent_error_message: "A permanent error occured while sending the signup message to '{email}'. Please check the e-mail address."
-signup_cannot_sent_message: "The signup message cannot be sent to '{email}' at this moment. Please, try again later."
-temporary_login_message: "A temporary login email has been sent to '{email}'."
-account_activation_message: "An account activation email has been sent to '{email}'."
-signup_complete_message: "Signup complete!"
-settings_saved_message: "Your settings have been saved."
+check_email_message: "Пожалуйста проверьте e-mail адрес"
+post_something_message: "Пожалуйста опубликуйте хоть что-то..."
+error_occured_message: "Возникла ошибка"
+post_deleted_message: "Сообщение '{title}' было удалено."
+logged_out_message: "Вы вышли."
+openid_not_found_message: "Извините, OpenID сервер не найден"
+openid_canceled_message: "Проверка OpenID была прервана"
+openid_failed_message: "Извините, проверка OpenID не прошла"
+openid_saving_error_message: "Ошибки при сохранении данных OpenID профайла с {identity_url}: {errors}"
+openid_no_user_message: "Нет пользователя с OpenID {identity_url}"
+invalid_login_message: "Неправильный логин или пароль. Пожалуйста попробуйте еще раз."
+topic_deleted_message: "Тема '{title}' была удалена."
+could_not_find_account_message: "Не получается найти аккаунт с адресом '{email}'. Пожалуйста проверьте правильность написания."
+signup_permanent_error_message: "Не получается отправить сообщение по адресу '{email}'. Пожалуйста проверьте e-mail адрес."
+signup_cannot_sent_message: "Регистрационное сообщение сейчас не может быть отправлено по адресу '{email}'. Пожалуйста попробуйте позже."
+temporary_login_message: "Временный логин отправлен по адресу '{email}'."
+account_activation_message: "Инструкция по активации отправлена по адресу '{email}'."
+signup_complete_message: "Регистрация завершена!"
+settings_saved_message: "Ваши настройки сахранены."
 
 footer_message: "Two's company. Three's a forum. More's a Beast."

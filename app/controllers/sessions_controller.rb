@@ -51,13 +51,13 @@ class SessionsController < ApplicationController
     
     def root_url() home_url; end
     
-  private
-    def open_id_redirect_url(open_id_response)
-      return_to = "#{request.protocol + request.host_with_port + request.path}?open_id_complete=1"
-      return_to << "&to=#{params[:to]}" unless params[:to].blank?
-      open_id_response.redirect_url(
-        request.protocol + request.host_with_port + "/",
-        open_id_response.return_to(return_to)
-      )     
-    end
+#  private
+#    def open_id_redirect_url(open_id_response)
+#      return_to = "#{request.protocol + request.host_with_port + request.path}?open_id_complete=1"
+#      return_to << "&to=#{params[:to]}" unless params[:to].blank?
+#      open_id_response.redirect_url(
+#        request.protocol + request.host_with_port + "/",
+#        open_id_response.return_to(return_to)
+#      )     
+#    end
 end

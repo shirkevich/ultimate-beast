@@ -1,9 +1,9 @@
-<h1><%= 'Login'[:login_title] %></h1>
+<h1><%= 'Login'[:login_header] %></h1>
 
 <% form_tag session_path do -%>
 <div id="password_fields"<%= %( style="display:none") unless cookies['use_open_id'].blank? %>>
 <p>
-  <label for="login"><%= 'Login'[:Login] %> or <%= link_to_function "login with OpenID", "LoginForm.setToOpenID()" %></label>
+  <label for="login"><%= 'Login'[:login_title] %> <%= 'or'[:or] %> <%= link_to_function "login with OpenID"[:login_with_openid], "LoginForm.setToOpenID()" %></label>
   <br />
   <%= text_field_tag :login, params[:login] %>
 </p>
@@ -19,7 +19,7 @@
 <div id="openid_fields"<%= %( style="display:none") if cookies['use_open_id'].blank? %>>
 <p>
   <label for="openid_url"><%= 'OpenID'[:open_id_directions] %>
-  or <%= link_to_function "login with your password", "LoginForm.setToPassword()" %></label>
+  <%= 'or'[:or] %> <%= link_to_function "login with your password"[:login_with_password], "LoginForm.setToPassword()" %></label>
   <br />
   <%= text_field_tag :openid_url, params[:openid_url] %>
 </p>

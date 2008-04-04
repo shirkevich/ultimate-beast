@@ -1,7 +1,7 @@
 beast_title: "Ultimate Beast"
-beast_sidebar_title: "What is Beast?"
-beast_sidebar_body: A small, light-weight forum in Rails with a scary name and a goal of around 500 lines of code when we're done.
-beast_welcome: Welcome to Beast
+beast_sidebar_title: "Что за Beast?"
+beast_sidebar_body: Небольшой легковесный форум с немного страшным названием и благой целью уложиться в 500 строк кода.
+beast_welcome: Добро пожаловать в Beast
 
 forum_title: Форум
 forums_title: Форумы
@@ -10,20 +10,20 @@ edit_forum: Редактировать форум
 save_forum: Сохранить форум
 create_new_forum: Создать новый форум
 
-forum_is_unmoderated: This forum is currently unmoderated.
-please_be_courteous: Please always be courteous.
+forum_is_unmoderated: На данный момент этот форум не модерируется.
+please_be_courteous: Пожалуйста, будьте вежливы.
 
 topic_title: Тема
 Topics_title: Темы
 edit_topic: Редактировать тему
 new_topic: Новая тема
-topic_posted_by: "{title} posted by {user} @ {date}"
-topic_replied_by: "{title} replied by {user} @ {date}"
+topic_posted_by: "{title} опубликована {user} @ {date}"
+topic_replied_by: "{title} дополнена {user} @ {date}"
 locked_topic: Эта тема заблокирована
-monitoring_topic: Monitoring topic
-monitor_topic: Monitor topic
-post_topic: Post topic
-reply_to_topic: Reply to topic
+monitoring_topic: Тема наблюдается
+monitor_topic: Наблюдать за темой
+post_topic: Опубликовать
+reply_to_topic: Ответить на тему
 save_reply: Сохранить ответ
 
 post_title: Сообщение
@@ -37,89 +37,93 @@ voices_title: Кто здесь?
 monitor_title: Monitor
 users_title: Пользователи
 recent_activity: Последняя активность
-no_recent_activity: No recent activity
-users_online: Пользователей на сайте
-change_login: Please change your login
-gravatar_notice: To have your very own avatar displayed on this forum visit {gravatar} and sign up for a free gravatar.
-change_email_or_password: Change e-mail or password
-name_or_login: Имя / Login
-reset_password: Reset Password
-user_profile: User Profile
-update_profile: Update Profile
-find_a_user: Find a User
-display_name_or_login: Display name or login
+no_recent_activity: Активности давно нет
+users_online: "Пользователи на сайте:"
+change_login: Пожалуйста поменяйте логин
+gravatar_notice: Этот форум использует аватары {gravatar}.
+change_email_or_password: Сохранить
+name_or_login: Имя / Логин
+reset_password: Сбросить пароль
+user_profile: Профиль пользователя
+update_profile: Обновить профиль
+find_a_user: Найти пользователя
+display_name_or_login: Имя или логин
 users: пользователи
-active: active
-lurking: lurking
-add_as_moderator: Добавить в модераторы
+active: активный
+lurking: следящий
+add_as_moderator: Сделать модератором
 user_is_an_administrator: Aдминистратор?
-monitored: monitored
-user_since: User since
+monitored: наблюдаемые
+user_since: С нами с
 
-pages_title: Pages
-next_page: Next Page
-next: "Next &raquo;"
-previous: "&laquo; Previous"
+pages_title: Страницы
+next_page: Следующая страница
+next: "вперед&nbsp;&raquo;"
+previous: "&laquo;&nbsp;назад"
 topics_count: "тем: {count}"
 posts_count: "сообщений: {count}"
 voices_count: "пользователей: {count}"
 posts_count_found: "найдено сообщений: {count}"
-cancel: cancel
-page: "page {page}"
+cancel: отменить
+page: "страница {page}"
 
 # field titles
-admin_title: Admin
+admin_title: Администратор
 title_title: Тема
 position_title: Позиция
 description_title: Описание
 edit_title: Редактировать
-moderators_title: Moderators
+moderators_title: Модераторы
 views_title: Просмотры
 settings_title: Настройки
 logout_title: Выйти
 signup_title: Регистрация
-login_title: Вход
+login_title: Логин
 save_title: Сохранить
-password_title: Password
+password_title: Пароль
 sticky_title: Прилеплена
 locked_title: Закрыта
 body_title: Тело
-display_name_title: Display Name
+display_name_title: Имя
 identity_url_title: Identity Url
-website_title: Website
-bio_title: Bio
+website_title: Сайт
+bio_title: Биография
 email_title: Email
-basics_title: Basics
-avatars_title: Avatars
+basics_title: Основные
+avatars_title: Аватары
 search_title: Поиск
 
+login_header: Вход
 by: by
-save_changes: Save Changes
-remember_me: Remember me on this computer
-delete_conf: "Delete this {thing} forever?"
-email_directions: Enter your email, and a brand new login key will be sent to you.  Click the link in the email to log in, and then change your password.
-email_submit: E-mail me the link
+save_changes: Сохранить изменения
+remember_me: Запомнить меня на этом компьютере
+delete_conf: "Удалить {thing} навсегда?"
+email_directions: Введите ваш email, получите письмо, перейдите по ссылке в нем и задайте себе новый пароль.
+email_submit: Отправить ссылку
 powered_by: Powered by
 and: и
-users_monitored_topics: "{name}'s Наблюдаемые Темы"
+users_monitored_topics: "{name} наблюдает темы"
 delete: удалить
 activation: Пожалуйста проследуйте по ссылке чтобы активировать свой аккаунт.
 without_http: без http://
 admin_in_parens: '(администратор)'
-admin_and_moderation: Администрирование &amp; Модерация
-remove_moderated_forum: Этот пользователь может модерировать следующие форумы. Нажмите чтобы удалить.
-remove_user_as_moderator: Отменить для пользователя модерирование
-searching_for: Ищется
-locked: заблокировано
+admin_and_moderation: Дополнительные права
+remove_moderated_forum: "Модератор следующих форумов (нажмите чтобы удалить):"
+remove_user_as_moderator: Лишить пользователя права модерировать форум
+searching_for: В поисках
+locked: заблокирована
 edit: редактировать
 delete: удалить
 login: войти
 once: разок
 and_again: и еще
 
+login_with_openid: 'войти по OpenID'
+login_with_password: 'войти по паролю'
+
 open_id_field: Введите ваш OpenID
 open_id_field_extended: Введите ваш OpenID. Если Ваш OpenID провайдер поддерживает {sreg} расширения, вы можете {login_link} и создать аккаунт автоматически
-login_field: Логин должен начинаться с 2х символов и может содержать буквы, цифры и знаки подчеркивания.
+login_field: Логин должен быть не короче 2-х символов и может содержать буквы, цифры и знаки подчеркивания.
 password_field: Введите пароль дважды. Он должен быть не короче 5 символов.
 
 formatting_help: Помощь по форматированию
@@ -140,12 +144,15 @@ hours_ago: "{hours} часа(ов) назад"
 1_day_ago: "1 день назад"
 days_ago: "{days} дня(дней) назад"
 
-topics: Темы
-posts: Сообщения
+topics: темы
+posts: сообщения
 topic_count: "тем: {count}"
 post_count: "сообщений: {count}"
 voice_count: "пользователей: {count}"
 post_count_found: "сообщений найдено: {count}"
+users_count: "пользователей: {count}"
+active_users_count: "активных: {count}"
+lurking_users_count: "следящих: {count}"
 
 comma_locked_topic: ", эта тема заблокирована."
 
@@ -159,8 +166,8 @@ topic_locked_title: Тема заблокирована
 
 recent_posts_in_topic: "Последние сообщения в '{topic}' | Beast"
 
-delete_post_conf: "Удалить это сообщение? Точно?"
-delete_topic_conf: "Удалить эту тему? Точно?"
+delete_post_conf: "Удалить это сообщение?"
+delete_topic_conf: "Удалить эту тему?"
 
 date_format: "%d.%m.%Y"
 datetime_format: "%d.%m.%Y %H:%M"

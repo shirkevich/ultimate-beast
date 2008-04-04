@@ -12,7 +12,9 @@
 
 <h1 style="margin-top:0;"><%= 'Users'[:users_title] %></h1>
 <p class="subtitle">
-<%= number_with_delimiter(@user_count) %> <%= 'users'[] %>, <%= @active %> <%= 'active'[] %>, <%= @user_count-@active %> <%= 'lurking'[] %>
+<%= '{count} users'[:users_count, number_with_delimiter(@user_count)] %>,
+<%= '{count} active'[:active_users_count, @active] %>,
+<%= '{count} lurking'[:lurking_users_count, @user_count-@active] %>
 </p>
 
 <%= pagination @users %>

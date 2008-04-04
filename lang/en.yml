@@ -93,6 +93,7 @@ basics_title: Basics
 avatars_title: Avatars
 search_title: Search
 
+login_header: Login
 by: by
 save_changes: Save Changes
 remember_me: Remember me on this computer
@@ -116,6 +117,9 @@ delete: delete
 login: login
 once: once
 and_again: and again
+
+login_with_openid: 'login with OpenID'
+login_with_password: 'login with your password'
 
 open_id_field: Enter your OpenID Identity Url if you know it
 open_id_field_extended: Enter your OpenID Identity Url if you know it.  If your Identity Url supports the {sreg} extension, you can {login_link} and create your account automatically
@@ -146,6 +150,9 @@ topic_count: "{count} topic"
 post_count: "{count} post"
 voice_count: "{count} voice"
 post_count_found: "{count} post found"
+users_count: "{count} users"
+active_users_count: "{count} active"
+lurking_users_count: "{count} lurking"
 
 comma_locked_topic: ", this topic is locked."
 

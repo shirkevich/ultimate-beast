@@ -1,59 +1,45 @@
-== Beast -  Two's company. Three's a forum. More's a Beast.
+Ultimate Beast
+==============
 
-A small, light-weight forum in Rails with a scary name and a goal of around 500 lines of code when we're done. [1]
+Beast -  Two's company. Three's a forum. More's a Beast.
+--------------------------------------------------------
 
-[1] The 500 LOC limit has officially been put to rest (http://beast.caboo.se/forums/1/topics/681), however the goal is unchanged: clean, readable code, and a great minimal forum app.  Less is more.
-
-
-== How to Obtain Beast
-
-Grab the latest:
-
-svn checkout http://svn.techno-weenie.net/projects/beast/trunk beast
-
-Customize your database.yml:
-
-cp config/database.example.yml config/database.yml
-
-Load the schema:
-
-rake db:schema:load
-
-(You cannot use rake db:migrate to migrate the schema up from 0)
-
-Change the PASSWORD_SALT in config/environment.rb.
-
-Update git submodules:
-git submodule init
-git submodule update
-
-Launch it:
-
-script/server
+A fork of small, light-weight forum in Rails with a scary name and a goal of around 500 lines of code when we're done.
 
 
-== Optional Gems
+How to Obtain Ultimate Beast
+----------------------------
 
-get RedCloth for using Textile in Ruby
+1. Grab the latest:
 
-gem install RedCloth
+   git clone git://github.com/shirkevich/ultimate-beast.git
 
-get OpenID for OpenID logins:
+2. Customize your database.yml:
 
-gem install ruby-openid
+   cp config/database.example.yml config/database.yml
 
-get GetText for Translation support
+3. Load the schema:
+
+   rake db:schema:load
+
+   (You cannot use rake db:migrate to migrate the schema up from 0)
+
+4. Update git submodules:
+
+   git submodule init
+   
+   git submodule update
+
+5. Launch it:
+
+   script/server
 
 
-== References
+Requiremets
+-----------
 
-Backpack project page
+* gem install RedCloth
 
-http://technoweenie.backpackit.com/pub/706157
+* gem install ruby-openid
 
-Installing on Windows Guide
-
-http://www.olddognewtricks.co.uk/2006/09/beast...
-
-#beastforum on freenode
 

@@ -14,7 +14,7 @@ class SessionsControllerTest < Test::Unit::TestCase
 
   def test_should_login
     old = users(:aaron).last_seen_at
-    post :create, :login => 'aaron', :password => 'testy'
+    post :create, :email => 'aaron@email.com', :password => 'testy'
     assert_redirected_to home_path
     assert_equal users(:aaron).id, session[:user_id]
     assert old != users(:aaron).reload.last_seen_at
@@ -22,12 +22,12 @@ class SessionsControllerTest < Test::Unit::TestCase
   end
   
   def test_should_login_and_remember_url
-    post :create, :login => 'aaron', :password => 'testy', :to => '%2Fforums%2F1'
+    post :create, :email => 'aaron@email.com', :password => 'testy', :to => '%2Fforums%2F1'
     assert_redirected_to forum_path(1)
   end
 
   def test_remember_me
-    post :create, :login => 'aaron', :password => 'testy', :remember_me => "1"
+    post :create, :email => 'aaron@email.com', :password => 'testy', :remember_me => "1"
     users(:aaron).reload
     
     assert cookies['login_token']
@@ -42,21 +42,21 @@ class SessionsControllerTest < Test::Unit::TestCase
     # make sure it change if log in again
     sleep 1
     old = users(:aaron).clone
-    post :create, :login => 'aaron', :password => 'testy', :remember_me => "1"
+    post :create, :email => 'aaron@email.com', :password => 'testy', :remember_me => "1"
     users(:aaron).reload
     assert_equal old.login_key, users(:aaron).login_key
     assert_not_equal(old.login_key_expires_at, users(:aaron).login_key_expires_at)
   end
 
   def test_should_fail_login_for_unactivated_user
-    post :create, :login => 'kyle', :password => 'testy'
+    post :create, :email => 'kyle@email.com', :password => 'testy'
     assert_response :success
     assert_template 'new'
     assert_nil session[:user_id]
   end
 
   def test_should_fail_login
-    post :create, :login => 'aaron', :password => 'bad'
+    post :create, :email => 'aaron@email.com', :password => 'bad'
     assert_response :success
     assert_template 'new'
     assert_nil session[:user_id]

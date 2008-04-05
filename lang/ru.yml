@@ -42,7 +42,7 @@ users_online: "Пользователи на сайте:"
 change_login: Пожалуйста поменяйте логин
 gravatar_notice: Этот форум использует аватары {gravatar}.
 change_email_or_password: Сохранить
-name_or_login: Имя / Логин
+name_or_login: Имя / OpenID
 reset_password: Сбросить пароль
 user_profile: Профиль пользователя
 update_profile: Обновить профиль

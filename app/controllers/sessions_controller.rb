@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
       open_id_authentication
     else
       cookies[:use_open_id] = {:value => '0', :expires => 1.year.ago.utc}
-      password_authentication params[:login], params[:password]
+      password_authentication params[:email], params[:password]
     end
   end
   
@@ -20,7 +20,7 @@ class SessionsController < ApplicationController
     def open_id_authentication
       authenticate_with_open_id params[:openid_url] do |result, openid_url|
         if result.successful?
-          if self.current_user = User.find_by_openid_url(openid_url)
+          if self.current_user = User.find_or_create_by_openid_url(openid_url)
             successful_login
           else
             failed_login "Sorry, no user by the identity URL {openid_url} exists"[:openid_no_user_message, openid_url.inspect]
@@ -31,8 +31,8 @@ class SessionsController < ApplicationController
       end
     end
 
-    def password_authentication(name, password)
-      if self.current_user = User.authenticate(name, password)
+    def password_authentication(email, password)
+      if self.current_user = User.authenticate(email, password)
         successful_login
       else
         failed_login "Invalid login or password, try again please."[:invalid_login_message]

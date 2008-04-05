@@ -1,6 +1,5 @@
 aaron:
   id: 1
-  login: aaron
   email: aaron@email.com
   password_hash: 4c426caff6b43918711cc94d7a0044bb60eee108 # testy
   created_at: <%= 5.days.ago.to_s :db %>
@@ -12,7 +11,6 @@ aaron:
   display_name: Aaron Stack
 sam:
   id: 2
-  login: sam
   display_name: sam
   email: sam@email.com
   password_hash: 4c426caff6b43918711cc94d7a0044bb60eee108 # testy
@@ -25,7 +23,6 @@ sam:
   login_key_expires_at: <%= Time.now.utc + 1.week %>
 joe:
   id: 3
-  login: joe
   display_name: joe
   email: joe@email.com
   password_hash: 4c426caff6b43918711cc94d7a0044bb60eee108 # testy
@@ -38,7 +35,6 @@ joe:
   login_key_expires_at: <%= (Time.now.utc + 1.week).to_s :db %>
 kyle:
   id: 4
-  login: kyle
   display_name: kyle
   email: kyle@email.com
   password_hash: 4c426caff6b43918711cc94d7a0044bb60eee108 # testy

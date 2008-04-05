@@ -8,11 +8,8 @@
 
 <h1><%= 'Settings'[:settings_title] %></h1>
 
-<p class="subtitle"><%= 'for {user}'[:for_user, @user.display_name] %>
-	<% if @user.login!=@user.display_name %>
-	(<%= @user.login %>)
-	<% end %>
-	</p>
+<p class="subtitle"><%= 'for {user}'[:for_user, @user.beauty_name] %>
+</p>
 
 <%= error_messages_for :user %>
 

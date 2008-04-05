@@ -1,1 +1,1 @@
-Gibberish.current_language = :en
+Gibberish.current_language = :ru

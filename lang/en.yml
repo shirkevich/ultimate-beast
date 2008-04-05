@@ -42,7 +42,7 @@ users_online: Users Online
 change_login: Please change your login
 gravatar_notice: To have your very own avatar displayed on this forum visit {gravatar} and sign up for a free gravatar.
 change_email_or_password: Change e-mail or password
-name_or_login: Name / Login
+name_or_login: Name / OpenID
 reset_password: Reset Password
 user_profile: User Profile
 update_profile: Update Profile

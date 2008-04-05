@@ -28,11 +28,10 @@
     <li><%= link_to_function 'Search'[:search_title], "$('search').toggle(); $('search_box').focus();", :href => home_path %></li>
 
     <% if logged_in? -%>
-    <li class="login"><%=  link_to current_user.beauty_name, user_path(current_user) %></li>
+    <li class="login"><%=  link_to current_user.beauty_name(20), user_path(current_user) %></li>
     <li class="logout"><%= link_to 'Settings'[:settings_title], settings_path %></li>
     <li class="logout"><%= link_to 'Logout'[:logout_title], logout_path(:to => CGI.escape(request.request_uri)) %></li>
     <% else -%>
-    <li><%= link_to 'Signup'[:signup_action], signup_path(:to => CGI.escape(request.request_uri)) %></li>
     <li><%= link_to 'Login'[:login_action], login_path(:to => CGI.escape(request.request_uri)) %></li>
     <% end -%>
   </ul>

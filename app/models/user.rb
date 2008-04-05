@@ -22,6 +22,9 @@ class User < ActiveRecord::Base
 
   validates_format_of :email, :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i, :message => "Please check the e-mail address"[:check_email_message], :allow_nil => true
 
+  def before_validation
+    write_attribute(:display_name, display_name.split.join(' ')) if attribute_present?(:display_name)
+  end
   validates_uniqueness_of :email, :allow_nil => true
   validates_uniqueness_of :display_name, :case_sensitive => false, :allow_nil => true
   validates_uniqueness_of :openid_url, :case_sensitive => true, :allow_nil => true

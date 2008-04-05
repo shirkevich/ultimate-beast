@@ -1,7 +1,17 @@
+<% content_for :right do -%>
+
+<h5><%= 'What is OpenID'[:what_is_openid] %></h5>
+<p><%= 'OpenID is a free and easy way to use a single digital identity across the Internet'[:openid_text]%>. <a href="http://openid.net/what/">More info</a>.</p>
+
+<h5><%= 'How do I get one?'[:how_to_get_openid] %></h5>
+<p>Surprise! You may already have one. <a href="http://openid.net/get/">Check it out now</a>!</p>
+
+<% end # right content -%>
+
 <h1><%= 'Login'[:login_header] %></h1>
 
 <% form_tag session_path do -%>
-<div id="password_fields"<%= %( style="display:none") unless cookies['use_open_id'].blank? %>>
+<div id="password_fields"<%= %( style="display:none") if cookies['use_password'].blank? %>>
 <p>
   <label for="email"><%= 'Email'[:email_title] %> <%= 'or'[:or] %> <%= link_to_function "login with OpenID"[:login_with_openid], "LoginForm.setToOpenID()" %></label>
   <br />
@@ -14,21 +24,24 @@
   <label for="password"><%= 'Password'[:password_title] %></label><br />
   <%= password_field_tag :password %>
 </p>
+<p><label><%= check_box_tag "remember_me", "1", true %> <%= 'Remember me on this computer'[:remember_me] %></label></p>
+<p><%= submit_tag 'Login'[:login_action], :or => link_to_function('reset password'[], "$('reset-password').toggle();") %></p>
+<p><%= link_to 'Signup'[:signup_action], signup_path(:to => CGI.escape(request.request_uri)) %></p>
 </div>
 
-<div id="openid_fields"<%= %( style="display:none") if cookies['use_open_id'].blank? %>>
+<div id="openid_fields"<%= %( style="display:none") unless cookies['use_password'].blank? %>>
 <p>
   <label for="openid_url"><%= 'OpenID'[:open_id_directions] %>
   <%= 'or'[:or] %> <%= link_to_function "login with your password"[:login_with_password], "LoginForm.setToPassword()" %></label>
   <br />
   <%= text_field_tag :openid_url, params[:openid_url] %>
+<p><label><%= check_box_tag "remember_me", "1", true %> <%= 'Remember me on this computer'[:remember_me] %></label></p>
+<p><%= submit_tag 'Login'[:login_action] %></p>
 </p>
 </div>
 
-<p><label><%= check_box_tag "remember_me", "1", true %> <%= 'Remember me on this computer'[:remember_me] %></label></p>
 
 
-<p><%= submit_tag 'Login'[:login_action], :or => link_to_function('reset password'[], "$('reset-password').toggle();") %></p>
 <% end -%>
 
 <% form_tag users_path, :id => 'reset-password', :style => 'display:none' do -%>

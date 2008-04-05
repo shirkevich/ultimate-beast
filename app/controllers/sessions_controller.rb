@@ -1,10 +1,10 @@
 class SessionsController < ApplicationController
   def create
     if using_open_id?
-      cookies[:use_open_id] = {:value => '1', :expires => 1.year.from_now.utc}
+      cookies[:use_password] = {:value => '0', :expires => 1.year.ago.utc}
       open_id_authentication
     else
-      cookies[:use_open_id] = {:value => '0', :expires => 1.year.ago.utc}
+      cookies[:use_password] = {:value => '1', :expires => 1.year.from_now.utc}
       password_authentication params[:email], params[:password]
     end
   end

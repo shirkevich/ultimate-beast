@@ -59,6 +59,15 @@ describe User, 'creation from openid_url' do
     @user.save.should be_true
     @user.openid_url.should == openid_url_with_upcase_path_saved
   end
+
+  it "should be possible to set nil email" do
+    @user.email = 'valid@email.com'
+    @user.save.should be_true
+    @user.email = nil
+    @user.should be_valid
+    @user.email = ''
+    @user.should be_valid
+  end
 end
 
 describe User, 'creation from email' do
@@ -124,14 +133,15 @@ describe User, 'display name' do
     end
   end 
 
-  it "should be uniq" do
-    name = 'вася'
-    @user.display_name = name
+  it "should be uniq" do # doesnt work in sqlite3
+    @user.display_name = 'веня дыркин'
     @user.save
     @another_user = User.create(:openid_url => 'http://another.ulr')
-    @another_user.display_name = 'Вася'
-    @another_user.should_not be_valid
-  end 
+    ['веня дыркин', ' веня дыркин', 'веня дыркин', 'веня  дыркин'].each do |display_name|
+      @another_user.display_name = display_name
+      @another_user.save.should be_false
+    end
+  end
 end
 
 describe User, 'admin creation' do

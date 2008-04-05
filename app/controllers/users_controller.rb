@@ -38,7 +38,6 @@ class UsersController < ApplicationController
       nil
     end
     if @user
-      @user.login ||= user_login
       @user.reset_login_key
     end
   
@@ -85,8 +84,6 @@ class UsersController < ApplicationController
   
   def update
     @user.attributes = params[:user]
-    # temp fix to let people with dumb usernames change them
-    @user.login = params[:user][:login] if not @user.valid? and @user.errors.on(:login)
     @user.save! and flash[:notice]="Your settings have been saved."[:settings_saved_message]
     respond_to do |format|
       format.html { redirect_to edit_user_path(@user) }

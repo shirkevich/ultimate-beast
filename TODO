@@ -1,3 +1,7 @@
+OpenID
 - allow to change openid from profile
+- implement sreg or/and attribute exchange
+
+
 - simplify mailers
-- translate form errors (http://simple-localization.arkanis.de/)?
+- translate form errors (http://simple-localization.arkanis.de/)? #testing now

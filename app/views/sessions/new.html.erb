@@ -1,11 +1,13 @@
 <% content_for :right do -%>
 
-<h5><%= 'What is OpenID'[:what_is_openid] %></h5>
-<p><%= 'OpenID is a free and easy way to use a single digital identity across the Internet'[:openid_text]%>. <a href="http://openid.net/what/">More info</a>.</p>
+<h5><%= 'What is OpenID?'[:what_is_openid] %></h5>
+<p><%= 'OpenID is a free and easy way to use a single digital identity across the Internet.'[:openid_text]%> <a href="http://openid.net/what/"><%= 'More info.'[:openid_more_info]%></a></p>
 
 <h5><%= 'How do I get one?'[:how_to_get_openid] %></h5>
-<p>Surprise! You may already have one. <a href="http://openid.net/get/">Check it out now</a>!</p>
+<p><%= 'Surprise! You may already have one.'[:how_to_get_text]%> <a href="http://openid.net/get/"><%= 'Check it out now!'[:openid_check_it]%></a></p>
 
+<h5><%= 'Dont like OpenID?'[:dont_like_openid] %></h5>
+<p><%= link_to 'Register with email and password'[:register_with_email], signup_path(:to => CGI.escape(request.request_uri)) %></p>
 <% end # right content -%>
 
 <h1><%= 'Login'[:login_header] %></h1>

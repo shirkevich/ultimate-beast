@@ -203,6 +203,6 @@ signup_cannot_sent_message: "Регистрационное сообщение �
 temporary_login_message: "Временный логин отправлен по адресу '{email}'."
 account_activation_message: "Инструкция по активации отправлена по адресу '{email}'."
 signup_complete_message: "Регистрация завершена!"
-settings_saved_message: "Ваши настройки сахранены."
+settings_saved_message: "Ваши настройки сохранены."
 
 footer_message: "Two's company. Three's a forum. More's a Beast."

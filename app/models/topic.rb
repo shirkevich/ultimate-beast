@@ -10,7 +10,7 @@ class Topic < ActiveRecord::Base
   belongs_to :user
   belongs_to :last_post, :class_name => "Post", :foreign_key => 'last_post_id'
   has_many :monitorships
-  has_many :monitors, :through => :monitorships, :conditions => ["#{Monitorship.table_name}.active = ?", true], :source => :user, :order => "#{User.table_name}.login"
+  has_many :monitors, :through => :monitorships, :conditions => ["#{Monitorship.table_name}.active = ?", true], :source => :user
 
   has_many :posts,     :order => "#{Post.table_name}.created_at", :dependent => :delete_all
   has_one  :recent_post, :order => "#{Post.table_name}.created_at DESC", :class_name => 'Post'

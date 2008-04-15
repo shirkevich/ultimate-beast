@@ -4,7 +4,7 @@ class Forum < ActiveRecord::Base
   validates_presence_of :name
 
   has_many :moderatorships, :dependent => :delete_all
-  has_many :moderators, :through => :moderatorships, :source => :user, :order => "#{User.table_name}.login"
+  has_many :moderators, :through => :moderatorships, :source => :user
 
   has_many :topics, :order => 'sticky desc, replied_at desc', :dependent => :delete_all
   has_one  :recent_topic, :class_name => 'Topic', :order => 'sticky desc, replied_at desc'

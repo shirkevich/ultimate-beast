@@ -1,0 +1,10 @@
+OpenID
+- allow to change openid from profile
+- implement sreg or/and attribute exchange
+
+
+- simplify mailers
+- translate form errors (http://simple-localization.arkanis.de/)? #testing now
+
+move will paginate from lib/ to gem
+- add config.gems 'will_paginate' with rails > 2.0.2 (2.2?)

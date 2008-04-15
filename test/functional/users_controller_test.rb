@@ -37,7 +37,7 @@ class UsersControllerTest < Test::Unit::TestCase
   
   def test_should_create_user
     assert_difference User, :count do 
-      post :create, :user => { :login => 'nico', :email => 'nico@email.com', :password => 'fooey', :password_confirmation => 'fooey' }
+      post :create, :user => { :email => 'nico@email.com', :password => 'fooey', :password_confirmation => 'fooey' }
     end
     assert_not_nil assigns(:user).login_key
     assert !assigns(:user).activated?
@@ -52,7 +52,7 @@ class UsersControllerTest < Test::Unit::TestCase
     define_method "test_should_not_save_user_when_email_raising_#{exc.name.demodulize.underscore}" do
       UserMailer.expects(:deliver_signup).raises(exc)
       assert_difference User, :count, 0 do 
-        post :create, :user => { :login => 'nico', :email => 'nico@email.com', :password => 'fooey', :password_confirmation => 'fooey' }
+        post :create, :user => { :email => 'nico@email.com', :password => 'fooey', :password_confirmation => 'fooey' }
       end
       assert_template 'new'
     end
@@ -75,7 +75,7 @@ class UsersControllerTest < Test::Unit::TestCase
 
   def test_should_require_password
     assert_difference User, :count, 0 do
-      post :create, :user => { :password => '', :password_confirmation => '', :login => '', :email => '' }
+      post :create, :user => { :password => '', :password_confirmation => '', :email => '' }
       assert_template 'new'
     end
   end
@@ -158,7 +158,7 @@ class UsersControllerTest < Test::Unit::TestCase
   def test_should_only_update_safe_fields
     # non-admin should not be able to change all this stuff
     login_as :sam
-    put :update, :id => users(:sam).id, :user => { :login => "ruby", :created_at => "2005-10-24", :updated_at => "2004-10-24", :last_login_at => "2005-10-24", :last_seen_at => "2005-10-24", :posts_count => "1000", :admin => "1" }
+    put :update, :id => users(:sam).id, :user => { :created_at => "2005-10-24", :updated_at => "2004-10-24", :last_login_at => "2005-10-24", :last_seen_at => "2005-10-24", :posts_count => "1000", :admin => "1" }
     assert_redirected_to edit_user_path(assigns(:user))
     assert_equal users(:sam), assigns(:user)
     [:created_at, :last_login_at, :posts_count, :admin].each do |attr|
@@ -166,7 +166,6 @@ class UsersControllerTest < Test::Unit::TestCase
     end
     assert_not_equal 2004, users(:sam).reload.updated_at.year
     assert_not_equal 2005, users(:sam).last_seen_at
-    assert_equal 'sam', users(:sam).login
     assert_equal 5, users(:sam).posts_count
     assert !users(:sam).admin?
   end

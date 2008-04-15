@@ -6,7 +6,7 @@
 <h5><%= 'Voices'[:voices_title] %></h5>
 <ul class="flat talking">
 <% @topic.voices.each do | user | %>
-  <li><%= link_to h(user.display_name), user_path(user) %></li>
+  <li><%= link_to h(user.beauty_name(20)), user_path(user) %></li>
 <% end %>
 </ul>
 
@@ -88,7 +88,7 @@
     </div>
 
     <%= avatar_for post.user %>
-    <span class="fn"><%= link_to truncate(h(post.user.display_name), 15), user_path(post.user), :class => (post.user == @posts.first.user ? "threadauthor" : nil) %></span>
+    <span class="fn"><%= link_to post.user.beauty_name(15), user_path(post.user), :class => (post.user == @posts.first.user ? "threadauthor" : nil) %></span>
     <% if post.user.admin? or post.forum.moderators.include?(post.user) %>
     <span class="admin">
       <% if post.user.admin? %>

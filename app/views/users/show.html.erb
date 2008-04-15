@@ -1,4 +1,4 @@
-<% @page_title = @user.display_name -%>
+<% @page_title = @user.beauty_name -%>
 
 <% content_for :right do %>
 <% if admin? %>
@@ -36,10 +36,10 @@
 
 <p style="float:right;"><%= avatar_for @user, 80 %></p> 
 
-<h1><%=h @user.display_name %> </h1>
+<h1><%=h @user.beauty_name %> </h1>
 
 <p class="subtitle">
-  <%= feed_icon_tag @user.display_name, formatted_user_posts_path(:user_id => @user, :format => :rss) %>
+  <%= feed_icon_tag @user.beauty_name, formatted_user_posts_path(:user_id => @user, :format => :rss) %>
   <span>
     <%= '{count} topics'[(count=@user.topics.size)==1 ? :topic_count : :topics_count, number_with_delimiter(count)] %>, 
     <%= '{count} posts'[(count=@user.posts.size)==1 ? :post_count : :posts_count, number_with_delimiter(count)] %>

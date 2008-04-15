@@ -27,7 +27,7 @@
   </tr>
 <% @users.each do |user|-%>  
   <tr>
-    <td><%= link_to h(user.display_name), user_path(user), :class => (user.admin? ? "admin" : nil) %>
+    <td><%= link_to h(user.beauty_name), user_path(user), :class => (user.admin? ? "admin" : nil) %>
       <span style="color:#666">
       <%= "(admin)"[:admin_in_parens] if user.admin? %>
       </span>

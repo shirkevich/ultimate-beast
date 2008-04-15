@@ -15,6 +15,7 @@ var LoginForm = {
   
   setToOpenID: function() {
     $('password_fields').hide();
+    $('reset-password').hide();
     $('openid_fields').show();
   }
 }

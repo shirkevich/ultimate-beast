@@ -42,7 +42,7 @@ users_online: "Пользователи на сайте:"
 change_login: Пожалуйста поменяйте логин
 gravatar_notice: Этот форум использует аватары {gravatar}.
 change_email_or_password: Сохранить
-name_or_login: Имя / Логин
+name_or_login: Имя / OpenID
 reset_password: Сбросить пароль
 user_profile: Профиль пользователя
 update_profile: Обновить профиль
@@ -206,3 +206,12 @@ signup_complete_message: "Регистрация завершена!"
 settings_saved_message: "Ваши настройки сохранены."
 
 footer_message: "Two's company. Three's a forum. More's a Beast."
+
+what_is_openid: "Что такое OpenID?"
+openid_text: "OpenID это свободный протокол для авторизации. Используя его можно авторизоваться на множестве сайтов используя один идентификатор."
+openid_more_info: "Подробнее."
+how_to_get_openid: "Как получить OpenID?"
+how_to_get_text: "Сюрприз! У вас возможно уже есть OpenID."
+openid_check_it: "Проверить!"
+dont_like_openid: "Не нравится OpenID?"
+register_with_email: "Зарегестрируйтесь по email с паролем."

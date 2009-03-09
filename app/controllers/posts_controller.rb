@@ -60,7 +60,7 @@ class PostsController < ApplicationController
     @post.save!
     respond_to do |format|
       format.html do
-        redirect_to topic_path(:forum_id => params[:forum_id], :id => params[:topic_id], :anchor => @post.dom_id, :page => params[:page] || '1')
+        redirect_to topic_path(:forum_id => params[:forum_id], :id => params[:topic_id], :anchor => dom_id(@post), :page => params[:page] || '1')
       end
       format.xml { head :created, :location => formatted_post_url(:forum_id => params[:forum_id], :topic_id => params[:topic_id], :id => @post, :format => :xml) }
     end
@@ -89,7 +89,7 @@ class PostsController < ApplicationController
   ensure
     respond_to do |format|
       format.html do
-        redirect_to topic_path(:forum_id => params[:forum_id], :id => params[:topic_id], :anchor => @post.dom_id, :page => params[:page] || '1')
+        redirect_to topic_path(:forum_id => params[:forum_id], :id => params[:topic_id], :anchor => dom_id(@post), :page => params[:page] || '1')
       end
       format.js
       format.xml { head 200 }

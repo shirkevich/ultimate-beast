@@ -5,7 +5,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-# RAILS_GEM_VERSION = '1.1.2' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.2.2' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -35,10 +35,13 @@ Rails::Initializer.run do |config|
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
 
-  # Make Active Record use UTC-base instead of local time
-  config.active_record.default_timezone = :utc
-#  config.active_record.whiny_protected_attributes = false
-  # See Rails::Configuration for more options
+  # Make Time.zone default to the specified zone, and make Active Record store time values
+  # in the database in UTC, and return them converted to the specified local zone.
+  # Run "rake -D time" for a list of tasks for finding time zone names. Comment line to use default local time.
+  config.time_zone = 'Moscow'
+
+  config.action_view.sanitized_allowed_tags = 'object', 'param', 'embed'
+  config.gem 'will_paginate'
 end
 
 # Add new inflection rules using the following format 
@@ -74,4 +77,4 @@ Module.class_eval do
   end
 end
 
-WhiteListHelper.tags.merge(%w(object param embed))
+#WhiteListHelper.tags.merge(%w(object param embed))

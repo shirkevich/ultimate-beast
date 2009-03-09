@@ -5,8 +5,8 @@ class Post < ActiveRecord::Base
   belongs_to :user
   belongs_to :topic
 
-  format_attribute :body
   before_create { |r| r.forum_id = r.topic.forum_id }
+  before_save { |r| r.body = sanitize(r.body) }
   after_create  :update_cached_fields
   after_destroy :update_cached_fields
 

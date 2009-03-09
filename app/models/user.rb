@@ -35,7 +35,6 @@ class User < ActiveRecord::Base
   # users coming from openid becomes activated
   before_create { |u| u.activated = true if u.openid_url }
   before_save   { |u| u.email.downcase! if u.email }
-  format_attribute :bio
 
   attr_reader :password
   attr_protected :admin, :posts_count, :login, :created_at, :updated_at, :last_login_at, :topics_count, :activated
@@ -92,8 +91,8 @@ class User < ActiveRecord::Base
   end
 
   def beauty_name(length = 100) 
-    return truncate(display_name, length) unless display_name.blank?
-    return truncate(openid_url.sub(/^https?:\/\//, ''), length) unless openid_url.blank?
+    return display_name[0..length] unless display_name.blank?
+    return openid_url.sub(/^https?:\/\//, '')[0..length] unless openid_url.blank?
     return "/users/#{id}"
   end
 
